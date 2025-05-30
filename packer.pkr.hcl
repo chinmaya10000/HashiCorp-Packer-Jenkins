@@ -10,7 +10,7 @@ packer {
 
 variable "aws_region" {
   type    = string
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 source "amazon-ebs" "ubuntu-node" {
@@ -21,7 +21,7 @@ source "amazon-ebs" "ubuntu-node" {
 
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+      name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
@@ -44,7 +44,7 @@ build {
     source      = "scripts/install.sh"
     destination = "/tmp/install.sh"
   }
-####veera
+
   provisioner "shell" {
     inline = [
       "chmod +x /tmp/install.sh",

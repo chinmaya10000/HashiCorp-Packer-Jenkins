@@ -17,7 +17,7 @@ sudo apt-get install -y nodejs build-essential
 
 echo "Installing PM2 globally..."
 sudo npm install -g pm2
-####veera
+
 
 echo "Copying application files..."
 sudo mkdir -p /opt/node-app

@@ -1,11 +1,12 @@
 pipeline {
     agent any
-// veera
+    
     environment {
-        AWS_REGION = 'us-east-1'
-        LAUNCH_TEMPLATE_ID = 'lt-04f4d7cd88876c81d'
-        ASG_NAME = "ASG"
-        
+        AWS_REGION = 'us-east-2'
+        LAUNCH_TEMPLATE_ID = 'lt-0c1b24dad3a8f83c6'
+        ASG_NAME = "MyASG"
+        AWS_ACCESS_KEY_ID = credentials('jenkins_aws_access_key_id')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins_aws_secret_access_key')   
     }
 
     stages {
