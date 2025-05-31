@@ -55,7 +55,7 @@ pipeline {
       steps {
         script {
           sh """
-            aws ec2 create-create-launch-template-version \
+            aws ec2 create-launch-template-version \
               --launch-template-id ${LAUNCH_TEMPLATE_ID} \
               --version-description "Updated to AMI ${NEW_AMI_ID}" \
               --source-version 1 \
