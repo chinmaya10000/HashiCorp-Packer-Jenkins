@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    AWS_REGION = 'us-west-2'
+    AWS_REGION = 'us-east-2'
     LAUNCH_TEMPLATE_ID = 'lt-096ba2151975b2c45' // Replace with your actual Launch Template ID
     ASG_NAME = 'my-auto-scaling-group'          // Replace with your actual Auto Scaling Group name
     AWS_ACCESS_KEY_ID = credentials('jenkins_aws_access_key_id')
